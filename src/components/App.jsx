@@ -10,6 +10,12 @@ class App extends Component {
     neutral: 0,
     bad: 0,
   };
+
+  handleFeedback = type => {
+    this.setState(prevState => ({
+      [type]: prevState[type] + 1,
+    }));
+  };
   render() {
     const { good, neutral, bad } = this.state;
     return (
@@ -17,6 +23,7 @@ class App extends Component {
         <Section title="Please leave your feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.handleFeedback}
           ></FeedbackOptions>
         </Section>
         <Section title="Statistics">
