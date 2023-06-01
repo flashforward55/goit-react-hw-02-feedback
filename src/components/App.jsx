@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import AppContainer from './App.styled';
-import Section from './Section/Section';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Section from './Section/Section';
 import Notification from './Notification/Notification';
 
 class App extends Component {
@@ -40,8 +40,9 @@ class App extends Component {
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
             onLeaveFeedback={this.handleFeedback}
-          ></FeedbackOptions>
+          />
         </Section>
+
         <Section title="Statistics">
           {totalFeedback > 0 ? (
             <Statistics
