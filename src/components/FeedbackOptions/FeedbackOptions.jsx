@@ -1,17 +1,19 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonContainer, FeedbackButton } from './FeedbackOptions.styled';
+import {
+  ButtonContainer,
+  FeedbackButton,
+  FeedbackLI,
+} from './FeedbackOptions.styled';
+import { capitalizeFirstLetter } from './CapitalizeFirstLetter';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <ButtonContainer>
     {options.map(option => (
-      <FeedbackButton
-        key={option}
-        type="button"
-        onClick={() => onLeaveFeedback(option)}
-      >
-        {option}
-      </FeedbackButton>
+      <FeedbackLI key={option}>
+        <FeedbackButton type="button" onClick={() => onLeaveFeedback(option)}>
+          {capitalizeFirstLetter(option)}
+        </FeedbackButton>
+      </FeedbackLI>
     ))}
   </ButtonContainer>
 );

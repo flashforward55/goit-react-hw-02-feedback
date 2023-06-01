@@ -6,5 +6,4 @@ export const SectionContainer = styled.div`
 
 export const SectionTitle = styled.h2`
   font-size: 24px;
-  margin-bottom: 10px;
 `;
