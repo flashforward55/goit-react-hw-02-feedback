@@ -1,11 +1,11 @@
 //import PropTypes from 'prop-types';
 import { StatisticsContainer, StatisticItem } from './Statistics.styled';
 
-const Statistics = () => (
+const Statistics = ({ good, neutral, bad }) => (
   <StatisticsContainer>
-    <StatisticItem>Good: </StatisticItem>
-    <StatisticItem>Neutral: </StatisticItem>
-    <StatisticItem>Bad: </StatisticItem>
+    <StatisticItem>Good: {good}</StatisticItem>
+    <StatisticItem>Neutral: {neutral} </StatisticItem>
+    <StatisticItem>Bad: {bad} </StatisticItem>
     <StatisticItem>Total: </StatisticItem>
     <StatisticItem>Positive feedback: %</StatisticItem>
   </StatisticsContainer>
