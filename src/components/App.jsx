@@ -10,7 +10,9 @@ class App extends Component {
     return (
       <AppContainer>
         <Section title="Please leave your feedback">
-          <FeedbackOptions></FeedbackOptions>
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+          ></FeedbackOptions>
         </Section>
         <Section title="Statistics">
           <Statistics></Statistics>

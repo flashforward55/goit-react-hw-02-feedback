@@ -1,5 +1,15 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
-const FeedbackOptions = () => {};
+import { ButtonContainer, FeedbackButton } from './FeedbackOptions.styled';
+
+const FeedbackOptions = ({ options }) => (
+  <ButtonContainer>
+    {options.map(option => (
+      <FeedbackButton key={option} type="button">
+        {option}
+      </FeedbackButton>
+    ))}
+  </ButtonContainer>
+);
 
 export default FeedbackOptions;
